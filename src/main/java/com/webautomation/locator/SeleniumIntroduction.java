@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumIntroduction {
@@ -26,10 +27,13 @@ public class SeleniumIntroduction {
 
         // driver.findElement(By.id("inputUsername")).sendKeys("albertjuntak@gmail.com");
 
-        driver.findElement(By.cssSelector("input#inputUsername")).sendKeys("albertjuntak@gmail.com");
+        WebElement userName = driver.findElement(By.cssSelector("input#inputUsername"));
+        userName.sendKeys("albertjuntak@gmail.com");
+
         driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("rahulshettyacademy");
 
-        driver.findElement(By.className("signInBtn")).click();
+        WebElement signBtn = driver.findElement(By.className("signInBtn"));
+        signBtn.click();
 
 
         Thread.sleep(5000);
