@@ -1,4 +1,4 @@
-package com.webautomation;
+package com.webautomation.locator;
 
 import java.sql.Time;
 import java.time.Duration;
