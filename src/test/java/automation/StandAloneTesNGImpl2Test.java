@@ -1,6 +1,7 @@
-package com.webautomation.scenario;
+package automation;
 
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -10,29 +11,36 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
-public class StandAloneTest {
-    public static void main(String[] args) throws InterruptedException {
-        /*
-         * 1. Implement e2e test for checkout
-         * 2. Wait != Thread
-         * 3. Stream
-         */
+import com.webautomation.pageobjects.LandingPage;
 
-        /*
-         * Scenario automation
-         * 1. Buyer Login
-         * 2. Buyer checkout product
-         * 3. Verifikasi thanks page
-         */
+public class StandAloneTesNGImpl2Test {
+    /*
+     * Annotasi
+     * dataprovider
+     * Running testng
+     */
 
+    public WebDriver driver;
+
+    @BeforeMethod
+    public void setUp(){
         //Setup Driver
         System.setProperty("webdriver.chrome.driver", "/Users/bytedance/CourseQAAutomation/Web Automation/chromedriver");
 
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/client");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    }
 
+
+    @Test(dataProvider = "dataTestMapping")
+    public void createOrder(HashMap<String, String> input) throws InterruptedException{
+       
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1000));
 
@@ -40,10 +48,8 @@ public class StandAloneTest {
 
         // Thread.sleep(100000);
         // Scenario Login
-        driver.findElement(By.id("userEmail")).sendKeys("simanjuntakalbert57@gmail.com");
-        driver.findElement(By.id("userPassword")).sendKeys("XBf@rWNvByn!#K8");
-
-        driver.findElement(By.className("login-btn")).click();
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.loginApplication(input.get("userEmail"), input.get("password"));
 
         // Thread.sleep(5000);
 
@@ -52,10 +58,9 @@ public class StandAloneTest {
         //List Product
         List<WebElement> listProduct =  driver.findElements(By.cssSelector(".mb-3"));
 
-        String productName = "ZARA COAT 3";
-
+        System.out.println("hasil" + input.get("productName"));
         WebElement product = listProduct.stream().filter(prod -> 
-        prod.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null);
+        prod.findElement(By.cssSelector("b")).getText().equals(input.get("productName"))).findFirst().orElse(null);
 
         product.findElement(By.xpath("//div[@class='card-body']//child::button//child::i[@class='fa fa-shopping-cart']")).click();
 
@@ -116,6 +121,29 @@ public class StandAloneTest {
         String confirmationPage = driver.findElement(By.className("hero-primary")).getText();
 
         System.out.println("buyer berhasil checkout " + confirmationPage);
+        
+    }
+
+    @AfterMethod
+    public void tearDown(){
         driver.close();
+    }
+
+    @DataProvider
+    public Object[][] dataTest(){
+        return new Object[][]{
+            {"simanjuntakalbert57@gmail.com", "XBf@rWNvByn!#K8", "ZARA COAT 3" },
+        };
+    }
+
+    //Mapping
+    @DataProvider
+    public Object[][] dataTestMapping(){
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("userEmail", "simanjuntakalbert57@gmail.com");
+        map.put("password", "XBf@rWNvByn!#K8");
+        map.put("productName", "ADIDAS ORIGINAL");
+
+        return new Object[][] {{map}};
     }
 }
