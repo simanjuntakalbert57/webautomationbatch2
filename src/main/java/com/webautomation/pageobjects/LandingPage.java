@@ -26,8 +26,7 @@ public class LandingPage extends AbstractComponent {
     @FindBy(className = "login-btn")
     WebElement loginBtn;
 
-     By cartButton = By.id("userEmail");
-    
+    By cartButton = By.id("userEmail");
 
     public void loginApplication(String email, String password){
         visibilityOfElementLocated(cartButton);

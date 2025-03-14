@@ -1,7 +1,13 @@
-/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/locator/LocatorPractice.java
 /Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/exploration/JavaStream.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/pageobjects/OrderPage.java
 /Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/locator/SeleniumIntroduction.java
-/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/locator/Alert.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/abstractcomponents/AbstractComponent.java
 /Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/scenario/StandAloneTest.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/pageobjects/ProductListPage.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/pageobjects/LandingPage.java
 /Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/Main.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/locator/LocatorPractice.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/pageobjects/CartPage.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/pageobjects/ConfirmationPage.java
+/Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/locator/Alert.java
 /Users/bytedance/CourseQAAutomation/Web Automation/webautomationbatch2/src/main/java/com/webautomation/locator/HandleWindow.java

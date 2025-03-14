@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-12T20:27:13 WIB" name="Surefire suite" finished-at="2025-03-12T20:28:10 WIB" duration-ms="56833">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunnerTestNg@34f7cfd9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-03-12T20:27:13 WIB" name="Surefire test" finished-at="2025-03-12T20:28:10 WIB" duration-ms="56833">
+      <class name="automation.StandAloneTesNGImpl2Test">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.StandAloneTesNGImpl2Test@3738449f]" started-at="2025-03-12T20:27:48 WIB" name="setUp" finished-at="2025-03-12T20:27:56 WIB" duration-ms="7915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createOrder(java.util.HashMap)[pri:0, instance:automation.StandAloneTesNGImpl2Test@3738449f]" started-at="2025-03-12T20:27:56 WIB" name="createOrder" data-provider="dataTestMapping" finished-at="2025-03-12T20:28:00 WIB" duration-ms="3592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=XBf@rWNvByn!#K8, userEmail=simanjuntakalbert57@gmail.com, productName=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.StandAloneTesNGImpl2Test@3738449f]" started-at="2025-03-12T20:28:00 WIB" name="tearDown" finished-at="2025-03-12T20:28:00 WIB" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.StandAloneTesNGImpl2Test -->
+      <class name="runners.TestRunnerTestNg">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunnerTestNg@34f7cfd9]" started-at="2025-03-12T20:27:13 WIB" name="setUpClass" finished-at="2025-03-12T20:27:13 WIB" duration-ms="320" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@337a6d30]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunnerTestNg@34f7cfd9]" started-at="2025-03-12T20:27:13 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-12T20:27:22 WIB" duration-ms="9259" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create Order Positive Case"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Purchase the order from ecommerce"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunnerTestNg@34f7cfd9]" started-at="2025-03-12T20:27:22 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-12T20:27:35 WIB" duration-ms="12923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create Order Positive Case"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Purchase the order from ecommerce"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunnerTestNg@34f7cfd9]" started-at="2025-03-12T20:27:35 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-12T20:27:48 WIB" duration-ms="12907" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create Order Positive Case1"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Purchase the order from ecommerce"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunnerTestNg@34f7cfd9]" started-at="2025-03-12T20:27:48 WIB" name="tearDownClass" finished-at="2025-03-12T20:27:48 WIB" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.TestRunnerTestNg -->
+      <class name="automation.StandAloneTesNGImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.StandAloneTesNGImplTest@20f5239f]" started-at="2025-03-12T20:28:00 WIB" name="setUp" finished-at="2025-03-12T20:28:06 WIB" duration-ms="6243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createOrder(java.util.HashMap)[pri:0, instance:automation.StandAloneTesNGImplTest@20f5239f]" started-at="2025-03-12T20:28:06 WIB" name="createOrder" data-provider="dataTestMapping" finished-at="2025-03-12T20:28:10 WIB" duration-ms="3436" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=XBf@rWNvByn!#K8, userEmail=simanjuntakalbert57@gmail.com, productName=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.StandAloneTesNGImplTest@20f5239f]" started-at="2025-03-12T20:28:10 WIB" name="tearDown" finished-at="2025-03-12T20:28:10 WIB" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.StandAloneTesNGImplTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
