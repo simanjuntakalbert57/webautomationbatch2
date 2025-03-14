@@ -14,27 +14,19 @@ import com.webautomation.pageobjects.LandingPage;
 import com.webautomation.pageobjects.OrderPage;
 import com.webautomation.pageobjects.ProductListPage;
 
-import components.BaseTest;
+import hook.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StepDefenitionsImpl extends BaseTest {
+public class StepDefenitionsImpl {
 
-    public WebDriver driver;
-    // String productName = "ZARA COAT 3";
-    // String destination = "Indonesia";
+    WebDriver driver;
 
     @Given("Buyer landing to ecommerce")
     public void landingPage() throws IOException {
-        //Setup Driver
-        // System.setProperty("webdriver.chrome.driver", "/Users/bytedance/CourseQAAutomation/Web Automation/chromedriver");
-        // driver = new ChromeDriver();
-        // driver.get("https://rahulshettyacademy.com/client");
-        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        driver=initializeDriver();
+        driver=Hooks.initializeDriver();
     }
 
     @Given("^Buyer logged to website email (.+) and password (.+)$")
@@ -47,7 +39,7 @@ public class StepDefenitionsImpl extends BaseTest {
     public void buyerAddProduct(String productName) throws InterruptedException{  
         ProductListPage productListPage = new ProductListPage(driver);
         productListPage.addToCart(productName);
-        driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
+        productListPage.goToCart();
     }
 
     @And("^Buyer checkout product (.+)$")
@@ -69,6 +61,10 @@ public class StepDefenitionsImpl extends BaseTest {
         ConfirmationPage confirmationPage = new ConfirmationPage(driver);
         String confirmationText = confirmationPage.getConfirmationPage();
         Assert.assertEquals(confirmationText, successCheckout);
-        driver.close();
+    }
+
+    @Given("Buyer logged to website")
+    public void login(){
+        
     }
 }
