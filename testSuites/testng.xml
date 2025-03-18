@@ -6,7 +6,7 @@
         <parameter name="program"  value="Bootcamp API Automation"/>
             <classes>
                 <!-- 
-                <class name="automation.StandAloneTesNGImpl2Test" /> -->
+                <class name="automation.StandAloneTesNGImpl2Test1" /> -->
                 <class name="runners.TestRunnerTestNg"/>
             </classes>
         </test>
