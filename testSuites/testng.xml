@@ -5,7 +5,7 @@
         <test name="MyTestGroup">
         <parameter name="program"  value="Bootcamp API Automation"/>
             <classes>
-                <!-- <class name="automation.StandAloneTesNGImplTest131" />
+                <!-- 
                 <class name="automation.StandAloneTesNGImpl2Test" /> -->
                 <class name="runners.TestRunnerTestNg"/>
             </classes>
