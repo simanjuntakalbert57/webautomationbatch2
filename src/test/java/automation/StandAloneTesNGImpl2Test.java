@@ -64,6 +64,8 @@ public class StandAloneTesNGImpl2Test {
 
         product.findElement(By.xpath("//div[@class='card-body']//child::button//child::i[@class='fa fa-shopping-cart']")).click();
 
+        // product.findElement(By.cssSelector(".card-body button:last-of-type")).click();
+
         System.out.println("list product" + product);
 
         // Thread.sleep(3000);

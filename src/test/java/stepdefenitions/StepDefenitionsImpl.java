@@ -60,7 +60,7 @@ public class StepDefenitionsImpl {
     public void confirmationPage(String successCheckout){
         ConfirmationPage confirmationPage = new ConfirmationPage(driver);
         String confirmationText = confirmationPage.getConfirmationPage();
-        Assert.assertEquals(confirmationText, successCheckout);
+        Assert.assertEquals(confirmationText, "afeahfeohoi", "Confirmation text not equal");
     }
 
     @Given("Buyer logged to website")
