@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.124" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-03-12T13:56:23.741497Z">
-<testcase classname="Purchase the order from ecommerce" name="Create Order Positive Case" time="4.019">
-<failure/>
+<testsuite name="Cucumber" time="10.391" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-03-14T13:02:16.846113Z">
+<testcase classname="Purchase the order from ecommerce" name="Create Order Positive Case1 - #1.1" time="10.258">
+<failure type="java.lang.AssertionError" message="Confirmation text not equal expected [afeahfeohoi] but found [THANKYOU FOR THE ORDER.]">
+<![CDATA[java.lang.AssertionError: Confirmation text not equal expected [afeahfeohoi] but found [THANKYOU FOR THE ORDER.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at stepdefenitions.StepDefenitionsImpl.confirmationPage(StepDefenitionsImpl.java:63)
+	at ✽.Buyer will see message is displayed on confirmation page THANKYOU FOR THE ORDER.(file:///Users/bytedance/CourseQAAutomation/Web%20Automation/webautomationbatch2/src/test/resources/features/CreateOrder.feature:34)
+]]>
+</failure>
 <system-out><![CDATA[
 Given Buyer landing to ecommerce............................................passed
-Given Buyer logged to website...............................................passed
-When Buyer add product to Cart..............................................undefined
+Given Buyer logged to website email simanjuntakalbert57@gmail.com and password XBf@rWNvByn!#K8.passed
+When Buyer add product ZARA COAT 3 to Cart..................................passed
+And Buyer checkout product ZARA COAT 3......................................passed
+And Buyer place order Indonesia.............................................passed
+Then Buyer will see message is displayed on confirmation page THANKYOU FOR THE ORDER..failed
 ]]></system-out>
 </testcase>
 </testsuite>
